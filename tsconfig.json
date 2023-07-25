@@ -24,6 +24,7 @@
     "./test/specs/**/*.ts",
     "./test/config/*.ts",
     "./test/pages/**/*.ts",
+    "./test/components/*.ts",
     "./wdio.conf.ts"
   ]
 }
