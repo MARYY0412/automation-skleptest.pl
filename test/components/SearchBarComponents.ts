@@ -1,24 +1,24 @@
-export class SearchBarComponent {
+export class SearchBar {
   //getters
-  get ButtonReference() {
+  get ButtonRef() {
     return $("#search-top-bar-submit");
   }
-  get InputReference() {
+  get InputRef() {
     return $("#search-field-top-bar");
   }
   //input
   async searchInputIsVisible() {
-    const input: WebdriverIO.Element = await this.InputReference;
+    const input: WebdriverIO.Element = await this.InputRef;
     await input.waitForDisplayed();
   }
   async searchInputSetValue(text: string) {
-    const input: WebdriverIO.Element = await this.InputReference;
+    const input: WebdriverIO.Element = await this.InputRef;
     await input.waitForDisplayed();
     await input.setValue(text);
   }
   //button
   async searchBarButtonClick() {
-    const button: WebdriverIO.Element = await this.ButtonReference;
+    const button: WebdriverIO.Element = await this.ButtonRef;
     await button.waitForDisplayed();
     await button.click();
   }
@@ -29,4 +29,4 @@ export class SearchBarComponent {
   }
 }
 
-export default new SearchBarComponent();
+export default new SearchBar();

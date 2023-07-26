@@ -1,17 +1,4 @@
-// //input name
-// export const correctName: string = "Mateusz";
-// export const incorrectName: string = "m";
-// //input email
-// export const correctEmail: string = "testowy@gmail.com";
-// export const incorrectEmail1: string = "testowygmail.com";
-// export const incorrectEmail2: string = "testowy@gmailcom";
-// export const incorrectEmail3: string = "asd";
-// //alert error info
-// export const alertIncorrectEmail: string = "Please enter email address.";
-// //span info, form send successfull
-// export const spanInfoFormSend: string = "Successfully Subscribed.";
-
-const NewsLetterPhrases = {
+const NewsletterPhrases = {
   //input name
   correctName: "Mateusz",
   incorrectName: "m",
@@ -26,4 +13,4 @@ const NewsLetterPhrases = {
   spanInfoFormSend: "Successfully Subscribed.",
 };
 
-export default NewsLetterPhrases;
+export default NewsletterPhrases;

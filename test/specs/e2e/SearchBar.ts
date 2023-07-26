@@ -1,7 +1,7 @@
 import { homeUrl } from "../../config/PagesUrl";
 import { SBPhrase1 } from "../../config/SearchBarPhrases";
 import GlobalPage from "../../pages/GlobalPage";
-import SearchBarComponent from "../../components/SearchBarComponents";
+import SearchBar from "../../components/SearchBar";
 
 describe("Homepage - searchbar", async () => {
   //id = 1
@@ -16,9 +16,9 @@ describe("Homepage - searchbar", async () => {
   });
   //id = 3
   it("Enter the following text to the textfield: 'Amari Shirt'. Check the results are correct.", async () => {
-    await SearchBarComponent.searchInputSetValue(SBPhrase1);
-    await SearchBarComponent.searchBarButtonClick();
-    await SearchBarComponent.searchBarFindResult(SBPhrase1);
+    await SearchBar.searchInputSetValue(SBPhrase1);
+    await SearchBar.searchBarButtonClick();
+    await SearchBar.searchBarFindResult(SBPhrase1);
   });
   //id=4
   // it("", async () => {});

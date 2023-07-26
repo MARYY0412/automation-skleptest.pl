@@ -1,5 +1,5 @@
-import NewsLetterForm from "../../components/NewsLetterForm";
-import NewsLetterPhrases from "../../config/NewsLetterPhrases";
+import NewsletterForm from "../../components/NewsletterForm";
+import NewsletterPhrases from "../../config/NewsletterPhrases";
 import GlobalPage from "../../pages/GlobalPage";
 import { homeUrl } from "../../config/PagesUrl";
 describe("", async () => {
@@ -9,20 +9,20 @@ describe("", async () => {
   });
   //send empty form
   it("Send empty form and verify the alert is showed. The alert should have taxt like in: 'alertIncorrectEmail' variable", async () => {
-    await NewsLetterForm.SubmitButtonClick();
+    await NewsletterForm.SubmitButtonClick();
     await expect(await browser.getAlertText()).toBe(
-      NewsLetterPhrases.alertIncorrectEmail
+      NewsletterPhrases.alertIncorrectEmail
     );
   });
   //send correct form
   it("Enter correct values to the form and click submit button. Info Span should have value like in 'spanInfoFormSend' variable.", async () => {
-    await NewsLetterForm.InputEmailSetValue(NewsLetterPhrases.correctEmail);
-    await NewsLetterForm.InputNameSetValue(NewsLetterPhrases.correctName);
-    await NewsLetterForm.SubmitButtonClick();
+    await NewsletterForm.InputEmailSetValue(NewsletterPhrases.correctEmail);
+    await NewsletterForm.InputNameSetValue(NewsletterPhrases.correctName);
+    await NewsletterForm.SubmitButtonClick();
     //check the communicate is correct
-    await NewsLetterForm.verifySpanInfo(NewsLetterPhrases.spanInfoFormSend);
+    await NewsletterForm.verifySpanInfo(NewsletterPhrases.spanInfoFormSend);
     //check inputs, are empty
-    await NewsLetterForm.verifyInputsAreEmpty();
+    await NewsletterForm.verifyInputsAreEmpty();
   });
   //send empty form
   //send form without name
