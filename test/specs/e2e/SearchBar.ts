@@ -7,11 +7,11 @@ describe("Homepage - searchbar", async () => {
   //id = 1
   it("Open the home page and verify the url address is correct. Check the search input is visible.", async () => {
     await GlobalPage.openPage(homeUrl, homeUrl);
-    await SearchBarComponent.searchInputIsVisible();
+    await SearchBar.searchInputIsVisible();
   });
   //id = 2
   it("Click searchbar submit button, without entering any text to the textfield. In the end, check the url is correct.", async () => {
-    await SearchBarComponent.searchBarButtonClick();
+    await SearchBar.searchBarButtonClick();
     await expect(browser).toHaveUrl(homeUrl + "?s=");
   });
   //id = 3
