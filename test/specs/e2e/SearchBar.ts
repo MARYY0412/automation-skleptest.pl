@@ -1,5 +1,5 @@
 import { homeUrl } from "../../config/PagesUrl";
-import { phrase1 } from "../../config/searchBarPhrases";
+import { SBPhrase1 } from "../../config/SearchBarPhrases";
 import GlobalPage from "../../pages/GlobalPage";
 import SearchBarComponent from "../../components/SearchBarComponents";
 
@@ -16,8 +16,10 @@ describe("Homepage - searchbar", async () => {
   });
   //id = 3
   it("Enter the following text to the textfield: 'Amari Shirt'. Check the results are correct.", async () => {
-    await SearchBarComponent.searchInputSetValue(phrase1);
+    await SearchBarComponent.searchInputSetValue(SBPhrase1);
     await SearchBarComponent.searchBarButtonClick();
-    await browser.pause(5000);
+    await SearchBarComponent.searchBarFindResult(SBPhrase1);
   });
+  //id=4
+  // it("", async () => {});
 });
