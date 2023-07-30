@@ -18,25 +18,25 @@ class NewsLetterForm {
   //methods
   async InputNameSetValue(text: string) {
     const input: WebdriverIO.Element = await this.InputNameRef;
-    input.setValue(text);
+    await input.waitForDisplayed();
+    await input.setValue(text);
   }
   async InputEmailSetValue(text: string) {
     const input: WebdriverIO.Element = await this.InputEmailRef;
-    input.setValue(text);
+    await input.waitForDisplayed();
+    await input.setValue(text);
   }
   async SubmitButtonClick() {
     const button: WebdriverIO.Element = await this.SubmitButtonRef;
-    button.click();
+    await button.waitForDisplayed();
+    await button.click();
   }
   async verifySpanInfo(text: string) {
-    const info: WebdriverIO.Element = await this.SpanInfoRef;
-    await expect(info).toHaveText(text);
+    const span: WebdriverIO.Element = await this.SpanInfoRef;
+    await span.waitForDisplayed();
+    await expect(span).toHaveText(text);
   }
   async verifyInputsAreEmpty() {
-    // const inputName = await this.InputNameRef;
-    // const inputEmail = await this.InputEmailRef;
-    // await expect(inputName).toHaveText("");
-    // await expect(inputEmail).toHaveText("");
     expect(await this.InputNameRef.getValue()).toEqual("");
     expect(await this.InputEmailRef.getValue()).toEqual("");
   }
