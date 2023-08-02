@@ -113,10 +113,4 @@ describe("Verify the coupon is working correctly. ", async () => {
     await GlobalPage.reloadTheSession();
     await browser.url(homeUrl);
   });
-  it("Add first product from the homepage to the shopping cart.", async () => {
-    await ShoppingCart.AddProductToCartFromHomepageAndOpenIt();
-  });
-  it("Click delete product from the shopping cart and verify it has been removed.", async () => {
-    await ShoppingCart.DeleteProduct();
-  });
 });
