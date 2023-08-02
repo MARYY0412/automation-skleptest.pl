@@ -9,9 +9,12 @@ const NewsletterPhrases = {
   incorrectEmail3: "testowy@@gmailcom",
   incorrectEmail4: "@gmail.com",
   //alert error info
+  alertEmptyForm: "Fill the blanks",
+  alertNoEmail: "Please enter email address",
+  alertNoName: "Please enter name",
   alertIncorrectEmail: "Incorrect email address",
   alertIncorrectName: "Incorrect name",
-  //span info, form send successfull
+  //span info, form send successfully
   spanInfoFormSend: "Successfully Subscribed.",
 };
 

@@ -39,6 +39,7 @@ export const config: Options.Testrunner = {
   suites: {
     // debug: ["./test/specs/e2e/SearchBar.ts"],
     debug: ["./test/specs/e2e/NewsLetterForm.ts"],
+    // debug: ["./test/specs/e2e/ShoppingCart.ts"],
     e2e: ["./test/specs/e2e/*.ts"],
   },
   //
@@ -55,7 +56,7 @@ export const config: Options.Testrunner = {
   // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 spec
   // files and you set maxInstances to 10, all spec files will get tested at the same time
   // and 30 processes will get spawned. The property handles how many capabilities
-  // from the same test should run tests.
+  // from the same test should run tess.t
   //
   maxInstances: 10,
   //

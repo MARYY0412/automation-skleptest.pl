@@ -16,6 +16,12 @@ class GlobalPage {
       await expect(alertText).toEqual(text);
     }
   }
+  async reloadTheSession() {
+    const client = await browser.newSession(browser.capabilities);
+    const clientNew = Object.create(browser);
+    await clientNew.deleteSession();
+    browser.sessionId = client.sessionId;
+  }
 }
 
 export default new GlobalPage();

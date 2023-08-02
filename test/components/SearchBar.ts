@@ -7,10 +7,6 @@ export class SearchBar {
     return $("#search-field-top-bar");
   }
   //input
-  async searchInputIsVisible() {
-    const input: WebdriverIO.Element = await this.InputRef;
-    await input.waitForDisplayed();
-  }
   async searchInputSetValue(text: string) {
     const input: WebdriverIO.Element = await this.InputRef;
     await input.waitForDisplayed();
@@ -26,6 +22,10 @@ export class SearchBar {
   async searchBarFindResult(searchedPhrase: string) {
     const result: WebdriverIO.Element = await $(`a=${searchedPhrase}`);
     await expect(result).toHaveText(searchedPhrase);
+  }
+  async searchBarResultClick(searchResult: string) {
+    const resultLink = await $(`a*=${searchResult}`);
+    await resultLink.click();
   }
 }
 
