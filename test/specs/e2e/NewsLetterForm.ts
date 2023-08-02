@@ -6,12 +6,6 @@ describe("Testing newsletter form.", async () => {
   before(() => {
     browser.url(homeUrl);
   });
-
-  // alertEmptyForm: "Fill the blanks",
-  // alertNoEmail: "Please enter email address",
-  // alertNoName: "Please enter name",
-  // alertIncorrectEmail: "Incorrect email address",
-  // alertIncorrectName: "Incorrect name",
   //id = 3
   //send correct form
   it("Send correct form. Info Span should have the text like 'spanInfoFormSend' variable.", async () => {
@@ -52,8 +46,7 @@ describe("Testing newsletter form.", async () => {
   //id = 7
   //send form with incorrect emails.
   //email without "@"
-  it("Should verify we can send form with incorrectEmail1 variable. Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
-    // incorrectEmail1: "testowygmail.com",
+  it("Send form with incorrectEmail1 variable(email: testowygmail.com). Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
     await NewsletterForm.InputEmailSetValue(NewsletterPhrases.incorrectEmail1);
     await NewsletterForm.InputNameSetValue(NewsletterPhrases.correctName);
     await NewsletterForm.SubmitButtonClick();
@@ -62,8 +55,7 @@ describe("Testing newsletter form.", async () => {
     );
   });
   //email without "."
-  it("Should verify we can send form with incorrectEmail2 variable. Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
-    // incorrectEmail2: "testowy@gmailcom",
+  it("Send form with incorrectEmail2 variable(email: testowy@gmailcom). Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
     await NewsletterForm.InputEmailSetValue(NewsletterPhrases.incorrectEmail2);
     await NewsletterForm.InputNameSetValue(NewsletterPhrases.correctName);
     await NewsletterForm.SubmitButtonClick();
@@ -72,8 +64,7 @@ describe("Testing newsletter form.", async () => {
     );
   });
   //email with "@@"
-  it("Should verify we can send form with incorrectEmail3 variable. Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
-    // incorrectEmail3: "testowy@@gmailcom",
+  it("Send form with incorrectEmail3 variable(email: testowy@@gmailcom). Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
     await NewsletterForm.InputEmailSetValue(NewsletterPhrases.incorrectEmail3);
     await NewsletterForm.InputNameSetValue(NewsletterPhrases.correctName);
     await NewsletterForm.SubmitButtonClick();
@@ -82,8 +73,7 @@ describe("Testing newsletter form.", async () => {
     );
   });
   //email: "@gmail.com"
-  it("Should verify we can send form with incorrectEmail4 variable. Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
-    // incorrectEmail4: "@gmail.com",
+  it("Send form with incorrectEmail4 variable(email: @gmail.com). Should popup an alert with text: 'alertIncorrectEmail' variable.", async () => {
     await NewsletterForm.InputEmailSetValue(NewsletterPhrases.incorrectEmail4);
     await NewsletterForm.InputNameSetValue(NewsletterPhrases.correctName);
     await NewsletterForm.SubmitButtonClick();
