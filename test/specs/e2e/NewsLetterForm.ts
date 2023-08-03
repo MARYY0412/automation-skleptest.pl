@@ -93,7 +93,6 @@ describe("Testing newsletter form.", async () => {
   });
   //name: "morethantwentyletters" - too long
   it("Send the form with 'incorrectName2' variable(too long). Should popup an alert with text: 'alertIncorrectName' variable.", async () => {
-    //case 1:name: "mm" - too short
     await NewsletterForm.InputEmailSetValue(NewsletterPhrases.correctEmail);
     await NewsletterForm.InputNameSetValue(NewsletterPhrases.incorrectName2);
     await NewsletterForm.SubmitButtonClick();
