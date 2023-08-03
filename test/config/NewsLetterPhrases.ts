@@ -1,7 +1,8 @@
 const NewsletterPhrases = {
   //input name
   correctName: "Mateusz",
-  incorrectName: "m",
+  incorrectName: "mm",
+  incorrectName2: "morethantwentyletters",
   //input email
   correctEmail: "testowy@gmail.com",
   incorrectEmail1: "testowygmail.com",
