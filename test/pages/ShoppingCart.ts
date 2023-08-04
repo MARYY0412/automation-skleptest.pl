@@ -18,6 +18,12 @@ class ShoppingCart {
   get TheQuantityOfProduct() {
     return $(".quantity > div > input");
   }
+  get CouponInputRef() {
+    return $("#coupon_code");
+  }
+  get CouponButtonRef() {
+    return $('input[name="apply_coupon"]');
+  }
   //Open the shopping cart
   async OpenShoppingCartButtonClick() {
     const button: WebdriverIO.Element = await this.OpenShoppingCartButtonRef;
@@ -71,6 +77,24 @@ class ShoppingCart {
     await viewCartButton.waitForDisplayed();
     //Just open the cart
     await this.OpenShoppingCartButtonClick();
+  }
+  async AddProductToCartFromHomepageAndOpenItById(id: string) {
+    //find "add-to-cart" button by product ID
+    const AddToCartButton = await $(`a[data-product_id="${id}"]`);
+    await AddToCartButton.click();
+    const viewCartButton: WebdriverIO.Element = await $('a[title="View cart"]');
+    await viewCartButton.waitForDisplayed();
+    //Just open the cart
+    await this.OpenShoppingCartButtonClick();
+  }
+  //coupons
+  async setCouponInputValue(text: string) {
+    const input: WebdriverIO.Element = await this.CouponInputRef;
+    await input.setValue(text);
+  }
+  async ApplyCouponButtonClick() {
+    const button: WebdriverIO.Element = await this.CouponButtonRef;
+    await button.click();
   }
 }
 

@@ -38,8 +38,8 @@ export const config: Options.Testrunner = {
 
   suites: {
     // debug: ["./test/specs/e2e/SearchBar.ts"],
-    debug: ["./test/specs/e2e/NewsLetterForm.ts"],
-    // debug: ["./test/specs/e2e/ShoppingCart.ts"],
+    // debug: ["./test/specs/e2e/NewsLetterForm.ts"],
+    debug: ["./test/specs/e2e/ShoppingCart.ts"],
     e2e: ["./test/specs/e2e/*.ts"],
   },
   //
