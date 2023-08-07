@@ -18,12 +18,57 @@ class ShoppingCart {
   get TheQuantityOfProduct() {
     return $(".quantity > div > input");
   }
+  //coupons
   get CouponInputRef() {
     return $("#coupon_code");
   }
   get CouponButtonRef() {
     return $('input[name="apply_coupon"]');
   }
+  //prices = refs
+
+  async StandardPriceOfFirstProductInCart() {
+    //return the value in "value zł" format
+    let price: string = await $(
+      'tbody > .cart_item:first-of-type > td[data-title="Price"] > span'
+    ).getText();
+    //return the value without "zł"
+    price = price.split(" ")[0];
+    //parse the value to number and return it
+    return parseFloat(price);
+  }
+  async StandardPriceOfSecondProductInCart() {
+    //return the value in "value zł" format
+    let price: string = await $(
+      'tbody > .cart_item:nth-of-type(2) > td[data-title="Price"] > span'
+    ).getText();
+    //return the value without "zł"
+    price = price.split(" ")[0];
+    //parse the value to number and return it
+    return parseFloat(price);
+  }
+  async FinalPriceOfFirstProductInCart() {
+    //return the value in "value zł" format
+    let price: string = await $(
+      'tbody > .cart_item:first-of-type > td[data-title="Total"] > span'
+    ).getText();
+    //return the value without "zł"
+    price = price.split(" ")[0];
+    //parse the value to number and return it
+    return parseFloat(price);
+  }
+  async FinalPriceOfSecondProductInCart() {
+    //return the value in "value zł" format
+    let price: string = await $(
+      'tbody > .cart_item:nth-of-type(2) > td[data-title="Total"] > span'
+    ).getText();
+    //return the value without "zł"
+    price = price.split(" ")[0];
+    //parse the value to number and return it
+    return parseFloat(price);
+  }
+
+  /////FUNCTIONS
   //Open the shopping cart
   async OpenShoppingCartButtonClick() {
     const button: WebdriverIO.Element = await this.OpenShoppingCartButtonRef;
