@@ -1,7 +1,7 @@
 const ShoppingCartPhrases = {
   //coupons
   CouponForAll: "CouponForAll",
-  CouponForShirts: "CouponForShirts",
+  CouponForJeans: "CouponForJeans",
 };
 
 export default ShoppingCartPhrases;

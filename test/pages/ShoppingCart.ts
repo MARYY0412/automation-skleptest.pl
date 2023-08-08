@@ -6,17 +6,18 @@ class ShoppingCart {
   get DeleteProductButtonRef() {
     return $('a[aria-label="Remove this item"]');
   }
+  //quantity
   get IncreaseQuantityButtonRef() {
     return $('a[data-increment="up"]');
   }
   get DecreaseQuantityButtonRef() {
     return $('a[data-increment="down"]');
   }
-  get UpdateCartButtonRef() {
-    return $('input[name="update_cart"]');
-  }
   get TheQuantityOfProduct() {
     return $(".quantity > div > input");
+  }
+  get UpdateCartButtonRef() {
+    return $('input[name="update_cart"]');
   }
   //coupons
   get CouponInputRef() {
@@ -26,7 +27,6 @@ class ShoppingCart {
     return $('input[name="apply_coupon"]');
   }
   //prices = refs
-
   async StandardPriceOfFirstProductInCart() {
     //return the value in "value zł" format
     let price: string = await $(
