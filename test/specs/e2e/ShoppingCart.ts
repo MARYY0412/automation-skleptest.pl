@@ -105,7 +105,6 @@ describe("Decrease the quantity of product in the shopping cart. Verify the valu
     await expect(parsedInitialValue).toEqual(parsedFinalValue + 1);
   });
 });
-//IN PROGRESS
 //id = 14 - done
 describe("Verify the coupon for all products is working correctly. Should set 10 percent of discount for each product in the shopping cart.", async () => {
   before(async () => {
